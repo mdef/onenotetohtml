@@ -57,6 +57,6 @@ To add code to the Visual Basic Editor
 In the Projects pane, click Module1.
 Paste or type the following Microsoft Visual Basic for Applications (VBA) code into the module window.
 
-Use code from oneonetohtml.bas.
+Use code from onenotetohtml.bas.
 
 And and click play button  :)  or F5.
