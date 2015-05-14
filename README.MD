@@ -1,4 +1,4 @@
-**Description**
+﻿**Description**
 
 Here is the way how you can migrate from 
 Microsoft Onenote to [tagspaces](http://www.tagspaces.org "").
@@ -19,6 +19,19 @@ You have to run Excel and Onenote simultaneously.
 4. Switch to OneNote. In OneNote you have to choose your first notebook to export. (If you have only one notebook, then you are done with this step.) If you have multiple notebooks you have to proceed all the steps with for every notebook you have and every time you have to change *FILE_PATH* according to the name of your notebook, then notes in notebooks will be separated as they been in Onenote.
 
 5. Switch to Visual basic for Applications  and click play button  :)  or F5. For me it was not very fast, but you can control the process observing file creation in *FILE_PATH* location.
+
+6. Now the easy step Convert all docs recursively to html 
+
+    ```bash
+find . -type d -exec sh -c '(cd "{}" && lowriter -convert-to html *.docx – )' ';'
+```
+7. Delete all docx recursively
+ 
+    ```bash
+find . -type f -name "*.docx" -delete
+```
+
+
 
 As result you should have bunch of html files with your notes together with hierarchy, as in Onenote.
 
